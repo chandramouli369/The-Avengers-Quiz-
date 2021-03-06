@@ -1,0 +1,173 @@
+<html> 
+<head> 
+<script> 
+    /* java script*/
+function demo1()                                    
+{ 
+     /* values of names will be stored in forms 2D array and assigned to objects */
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["phone"];  
+    var what =  document.forms["RegForm"]["Subject"];  
+    var password = document.forms["RegForm"]["password"];  
+    var address = document.forms["RegForm"]["Address"];  
+   /*object.value== empty*/
+    if (name.value == "")                                  
+    { 
+       /* The alert() method displays an alert box with a specified message and an OK button.*/
+        window.alert("Please answer."); 
+       /* JavaScript focus method is used to give focus to a html element.*/
+        name.focus(); 
+
+        return false; 
+    } 
+    if (address.value == "")                               
+    { 
+        window.alert("Please answer."); 
+        address.focus(); 
+        return false; 
+    } 
+    if (email.value == "")                                   
+    { 
+        window.alert("Please answer."); 
+        email.focus(); 
+        return false; 
+    } 
+    if (password.value == "")                        
+    { 
+        window.alert("Please answer"); 
+        password.focus(); 
+        return false; 
+    } 
+    if (phone.value == "")                           
+    { 
+        window.alert("Please answer."); 
+        phone.focus(); 
+        return false; 
+    } 
+    if (what.value == "")                           
+    { 
+        window.alert("Please answer."); 
+        phone.focus(); 
+        return false; 
+    } 
+  
+  
+    /*if all cases failed*/
+     window.alert("your answers were registerd sucessfully");
+    return true; 
+}
+</script> 
+<style> 
+             /*css*/
+    /* Style body */
+body {      
+   color: white;                        
+    font-weight: bold;
+    font-family:sans-serif; 
+    font-size: 20px; 
+     /* opacity 0.0 (fully transparent) 1.0 (fully opaque)*/
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(avengers9.jpg);
+     background-attachment: fixed;
+      /* background sholdnt move*/
+     background-size: cover;
+      /* covers entire background */
+   
+} 
+/* style form by creating class */
+form {                                         
+  margin: 0 auto; 
+   color: white;    
+ background-color: rgba(0,0,0,0.3); 
+ width: 500px; 
+ border: 1px solid white;
+ font-size: 15px;  
+    padding-top: 45px;
+  padding-bottom: 45px;
+  padding-left: 38px;
+  /*CSS padding properties are used to generate space around an element's content*/  
+  border-radius: 30px;
+}
+/* for styling textbox*/
+input{
+     border-radius: 30px;
+     padding: 3.3px;
+}
+/* for styling textarea*/
+textarea{
+     border-radius: 30px;
+     padding: 3.3px;
+}
+/* style option tag*/
+select{
+    color:red;
+}
+/* Style the submit button */
+input[type=submit] {
+    /* #4CAF50 (or 0x4CAF50) named as Fruit Salad HEX triplet: 4C, AF and 50.rgb value is (76,175,80). */ 
+  background-color: #4CAF50;
+  /*position from left side*/
+   margin-left: 180px; 
+  border: 1px solid green;
+  width: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+/* Style  button */
+button
+{
+   /* #4CAF50 (or 0x4CAF50) named as Fruit Salad HEX triplet: 4C, AF and 50.rgb value is (76,175,80). */ 
+background-color: #4CAF50;
+/*position from left side*/
+   margin-left: 180px; 
+  border: 1px solid green;
+  width: 80px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+   border-radius: 30px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.btn{
+border:1px solid #fff;
+padding:6px 10px;
+color: red;
+text-decoration: none;
+background-color: #fff;
+border-radius: 28px;
+}
+.btn:hover{
+background-color:  #ffc0cb;
+color:#000;
+}
+</style>
+</head> 
+<body> 
+<h1 style="text-align: center;font-family:sans-serif;color: white;">Avengers Quiz(level 2)</h1>  
+<br><br>
+<marquee  behavior="scroll" direction="left" scrollamount="14">
+<p>&#128525; Dear avenger fans here is your level 2!! &#128525;</p>
+</marquee>
+<br><br>
+<!--form skelton-->
+<form name="RegForm" action="slide7.html" onsubmit="demo1()" method="post">  
+    <!--form fields are-->
+      where is captain america from?:<br>
+      <!--required means shouldnt skip this field during submission-->
+    <p> <input type="text" size=60 name="Name" pattern="[b]{1}[r]{1}[o]{1}[o]{1}[k]{1}[l]{1}[y]{1}[n]{1}" required > </p><br> 
+     who is marvel's oldman?<br>       
+    <p><input type="text" size=60 name="Address" pattern="[s]{1}[t]{1}[a]{1}[n]{1}[l]{1}[e]{1}[e]{1}" required></p><br> 
+     who resnapped gauntlet in endgame atlast?<br><br>
+    <p> <input type="text" size=60 name="EMail" pattern="[i]{1}[r]{1}[o]{1}[n]{1}[m]{1}[a]{1}[n]{1}" required="" > </p><br> 
+    who is winter soldier? <br>
+       <p> <input type="text" name="password" size=60  pattern="[b]{1}[u]{1}[c]{1}[k]{1}[y]{1}[b]{1}[a]{1}[r]{1}[n]{1}[e]{1}[s]{1}" required=""> </p><br>
+     who is daughter of thanos? <br>
+    <p> <input type="text" name="phone" size=60 pattern="[g]{1}[a]{1}[m]{1}[o]{1}[r]{1}[a]" required=""></p><br>
+     captain america shield made up of?? <br>
+    <p> <input type="text" name="Subject" size=60 pattern="[v]{1}[i]{1}[b]{1}[r]{1}[a]{1}[n]{1}[i]{1}[u]{1}[m]{1}" required=""></p><br>
+    <p><input type="submit"  name="Submit" value="Submit" class="btn"> </p>          
+</form> 
+</body> 
+</html> 

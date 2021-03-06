@@ -1,0 +1,183 @@
+<html> 
+<head> 
+<script> 
+    /* java script*/
+function demo1()                                    
+{ 
+     /* values of names will be stored in forms 2D array and assigned to objects */
+    var name = document.forms["RegForm"]["Name"];               
+    var email = document.forms["RegForm"]["EMail"];    
+    var phone = document.forms["RegForm"]["phone"];  
+    var what =  document.forms["RegForm"]["Subject"];  
+    var password = document.forms["RegForm"]["password"];  
+    var address = document.forms["RegForm"]["Address"];  
+   /*object.value== empty*/
+    if (name.value == "")                                  
+    { 
+       /* The alert() method displays an alert box with a specified message and an OK button.*/
+        window.alert("Please enter your name."); 
+       /* JavaScript focus method is used to give focus to a html element.*/
+        name.focus(); 
+
+        return false; 
+    } 
+    if (address.value == "")                               
+    { 
+        window.alert("Please enter your address."); 
+        address.focus(); 
+        return false; 
+    } 
+    if (email.value == "")                                   
+    { 
+        window.alert("Please enter a valid e-mail address."); 
+        email.focus(); 
+        return false; 
+    } 
+    if (password.value == "")                        
+    { 
+        window.alert("Please enter your password"); 
+        password.focus(); 
+        return false; 
+    } 
+    /*if all cases failed*/
+     window.alert("registered sucessfully");
+    return true; 
+}
+</script> 
+<style> 
+             /*css*/
+    /* Style body */
+body {      
+   color: white;                        
+    font-weight: bold;
+    font-family:sans-serif; 
+    font-size: 21px; 
+     /* opacity 0.0 (fully transparent) 1.0 (fully opaque)*/
+     background-image: linear-gradient(rgba(0, 0, 0, 0.5),rgba(0, 0, 0, 0.5)),url(avengers9.jpg);
+     background-attachment: fixed;
+      /* background sholdnt move*/
+     background-size: cover;
+      /* covers entire background */
+   
+} 
+/* style form by creating class */
+form {                                         
+  margin: 0 auto; 
+   color: white;    
+ background-color: rgba(0,0,0,0.33); 
+ width: 510px; 
+ border: 1px solid white;
+ font-size: 15px;  
+    padding-top: 45px;
+  padding-bottom: 45px;
+  padding-left: 38px;
+  /*CSS padding properties are used to generate space around an element's content*/  
+  border-radius: 30px;
+}
+/* for styling textbox*/
+input{
+     border-radius: 30px;
+     padding: 3.3px;
+}
+/* for styling textarea*/
+textarea{
+     border-radius: 30px;
+     padding: 3.3px;
+}
+/* style option tag*/
+select{
+    color:red;
+}
+/* Style the submit button */
+input[type=submit] {
+    /* #4CAF50 (or 0x4CAF50) named as Fruit Salad HEX triplet: 4C, AF and 50.rgb value is (76,175,80). */ 
+  background-color: #4CAF50;
+  /*position from left side*/
+   margin-left: 180px; 
+  border: 1px solid green;
+  width: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 15px;
+  padding-left: 10px;
+}
+/* Style  button */
+button
+{
+   /* #4CAF50 (or 0x4CAF50) named as Fruit Salad HEX triplet: 4C, AF and 50.rgb value is (76,175,80). */ 
+background-color: #4CAF50;
+/*position from left side*/
+   margin-left: 180px; 
+  border: 1px solid green;
+  width: 80px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+   border-radius: 30px;
+  font-size: 14px;
+  padding-left: 10px;
+}
+.btn{
+border:1px solid #fff;
+padding:6px 10px;
+color: red;
+text-decoration: none;
+background-color: #fff;
+border-radius: 28px;
+}
+.btn:hover{
+background-color:  #ffc0cb;
+color:#000;
+}
+</style>
+</head> 
+<body> 
+<h1 style="text-align: center;font-family:sans-serif;color: white;">Avengers quiz(registration form)</h1>  
+<br>
+
+<!--java script can change html content-->
+<marquee behavior="scroll" direction="left" scrollamount="15">
+<p id="demo"> &#128525;Hello avenger fans this is to inform you please register this form this registration is mandatory to all the fans for quiz!!!&#128525;</p>
+</marquee>
+<!--.innerHTML is for writing output data of a javascript-->
+<button type="button" onclick='document.getElementById("demo").innerHTML = "Dear avenger fans please go through this form which is very essential for all of you and all of you  must fill this form without any fault!!!"'>Click Me!</button>
+<br>
+<p>avengers can  change font size</p>
+<!--to change fontsize-->
+<button type="button" onclick="document.getElementById('demo').style.fontSize='26px'">font!</button> 
+<!--javascript date function can show date and time-->
+<p>click here for your registration time</p>
+<button type="button"
+onclick="document.getElementById('demo').innerHTML = Date()">
+Date</button>
+
+<p id="demo"></p>
+<br><br>
+<!--form skelton-->
+<form name="RegForm" action="slide3.html" onsubmit="demo1()" method="post">  
+    <!--form fields are-->
+      Name:<br>
+      <!--required means shouldnt skip this field during submission-->
+    <p> <input type="text" size=62 name="Name" required> </p><br> 
+    Address:<br>       
+    <p><input type="text" size=62 name="Address" required></p><br> 
+    E-mail Address:<br>
+    <p> <input type="email" size=62 name="EMail" required> </p><br> 
+    Password: <br>
+       <p> <input type="text" name="password" size=62 pattern="[a-z]{5}[0-9]{3}" required> </p><br>
+     mobile: <br>
+    <p> <input type="tel" name="phone" size=62 pattern="[0-9]{10}" required=""> </p><br>
+    <!--option tag is  for defining options in selected list-->
+    <p>opt number of players<br><br>
+    <!--displays option list--> 
+        <select type="text" value="" name="Subject" required> 
+            <option>1</option> 
+            <option>2</option> 
+            <option>3</option> 
+        </select></p><br>
+        <!--comment box-->
+        Comments: <br>
+    <p><textarea cols="62" name="Comment"></textarea></p> <br>
+    <p><input type="submit"  name="Submit" value="Submit" class="btn"> </p>          
+</form> 
+</body> 
+</html> 
